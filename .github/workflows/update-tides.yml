@@ -1,0 +1,26 @@
+name: 물때 자동 갱신
+on:
+  schedule:
+    - cron: "10 19 * * *"   # 매일 한국 시간 새벽 4시 10분
+  workflow_dispatch: {}      # 필요할 때 수동 실행
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 물때 받아오기
+        env:
+          KHOA_KEY: ${{ secrets.KHOA_KEY }}
+        run: python3 tools/update_tides.py 45
+      - name: 바뀐 내용 저장
+        run: |
+          git config user.name "tide-bot"
+          git config user.email "tide-bot@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet || git commit -m "물때 갱신 $(TZ=Asia/Seoul date +%F)"
+          git push
