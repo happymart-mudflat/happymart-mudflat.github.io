@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" width="320" height="240">
+  <defs>
+    <linearGradient id="sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B9A383"/>
+      <stop offset="1" stop-color="#8F7658"/>
+    </linearGradient>
+    <linearGradient id="pool" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#BFD6DE"/>
+      <stop offset="1" stop-color="#8FB2C0"/>
+    </linearGradient>
+    <radialGradient id="shade" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#3B2C1F" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#3B2C1F" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 갯벌 바닥 -->
+  <rect width="320" height="240" fill="url(#sand)"/>
+  <g fill="none" stroke="#D8C8AE" stroke-opacity=".45" stroke-width="2" stroke-linecap="round">
+    <path d="M-10 30 C40 18 80 42 130 30 S220 18 270 30 S330 40 340 34"/>
+    <path d="M-10 62 C30 52 90 74 140 62 S230 50 280 62 S330 70 340 66"/>
+    <path d="M-10 150 C40 140 90 162 150 150 S240 138 290 150 S330 160 340 156"/>
+    <path d="M-10 186 C30 176 100 198 160 186 S250 174 300 186 S330 192 340 190"/>
+    <path d="M-10 218 C50 208 110 230 170 218 S260 206 340 220"/>
+  </g>
+
+  <!-- 물웅덩이 -->
+  <path d="M196 74 C222 60 276 64 300 82 C318 96 300 116 268 116 C236 118 214 112 200 102 C188 94 186 82 196 74Z" fill="url(#pool)" opacity=".9"/>
+  <path d="M214 84 C232 78 262 80 278 88" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/>
+  <path d="M18 196 C34 186 74 186 90 198 C100 206 86 216 62 216 C38 216 10 210 18 196Z" fill="url(#pool)" opacity=".8"/>
+
+  <!-- 작은 숨구멍들 -->
+  <g fill="#4A3826">
+    <ellipse cx="44" cy="96" rx="3" ry="2"/><ellipse cx="60" cy="120" rx="2.5" ry="1.6"/>
+    <ellipse cx="128" cy="210" rx="3" ry="2"/><ellipse cx="292" cy="196" rx="2.5" ry="1.6"/>
+    <ellipse cx="170" cy="40" rx="2.5" ry="1.6"/><ellipse cx="230" cy="168" rx="3" ry="2"/>
+  </g>
+  <g fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.2">
+    <circle cx="44" cy="88" r="2.2"/><circle cx="47" cy="80" r="1.6"/>
+    <circle cx="230" cy="160" r="2.2"/>
+  </g>
+
+  <!-- 맛조개: 소금을 뿌린 구멍에서 쏙 -->
+  <g transform="translate(72 70)">
+    <ellipse cx="0" cy="40" rx="16" ry="5" fill="url(#shade)"/>
+    <ellipse cx="-5" cy="40" rx="5" ry="2.6" fill="#3A2B1C"/>
+    <ellipse cx="5" cy="40" rx="5" ry="2.6" fill="#3A2B1C"/>
+    <rect x="-7" y="-6" width="14" height="48" rx="7" fill="#E6D2A6" stroke="#8C6A3A" stroke-width="1.5"/>
+    <g stroke="#B59464" stroke-width="1.2" stroke-linecap="round">
+      <path d="M-5 4 L5 6"/><path d="M-5 12 L5 14"/><path d="M-5 20 L5 22"/><path d="M-5 28 L5 30"/>
+    </g>
+    <ellipse cx="0" cy="-4" rx="4.5" ry="3" fill="#CDB487"/>
+    <g fill="#fff">
+      <rect x="-16" y="-22" width="2.4" height="2.4" rx=".6"/><rect x="12" y="-26" width="2.4" height="2.4" rx=".6"/>
+      <rect x="-10" y="-30" width="2" height="2" rx=".5"/><rect x="16" y="-14" width="2" height="2" rx=".5"/>
+      <rect x="-20" y="-8" width="2" height="2" rx=".5"/>
+    </g>
+  </g>
+
+  <!-- 조개 두 개 -->
+  <g transform="translate(250 176) rotate(-12)">
+    <ellipse cx="0" cy="14" rx="22" ry="5" fill="url(#shade)"/>
+    <path d="M-20 8 Q-22 -16 0 -18 Q22 -16 20 8 Q0 14 -20 8Z" fill="#EADBC3" stroke="#9E7F58" stroke-width="1.6"/>
+    <g stroke="#B49672" stroke-width="1.2"><path d="M-6 -15 L-14 7"/><path d="M0 -16 L0 10"/><path d="M6 -15 L14 7"/><path d="M-11 -12 L-19 5"/><path d="M11 -12 L19 5"/></g>
+  </g>
+  <g transform="translate(150 206) rotate(14)">
+    <ellipse cx="0" cy="11" rx="16" ry="4" fill="url(#shade)"/>
+    <path d="M-15 6 Q-16 -12 0 -13 Q16 -12 15 6 Q0 10 -15 6Z" fill="#D9C2A0" stroke="#8F6E4C" stroke-width="1.4"/>
+    <g stroke="#A88660" stroke-width="1.1"><path d="M-5 -11 L-10 5"/><path d="M0 -12 L0 8"/><path d="M5 -11 L10 5"/></g>
+  </g>
+
+  <!-- 꽃게 -->
+  <g transform="translate(168 128)">
+    <ellipse cx="0" cy="24" rx="46" ry="9" fill="url(#shade)"/>
+    <g stroke="#9E2A1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M-22 6 L-40 0 L-48 10"/><path d="M-22 12 L-42 14 L-48 26"/><path d="M-20 18 L-36 26 L-38 36"/>
+      <path d="M22 6 L40 0 L48 10"/><path d="M22 12 L42 14 L48 26"/><path d="M20 18 L36 26 L38 36"/>
+      <path d="M-16 -8 L-28 -26"/><path d="M16 -8 L28 -26"/>
+    </g>
+    <path d="M-36 -40 C-46 -40 -48 -24 -38 -20 C-30 -17 -24 -22 -24 -28 L-32 -30 L-25 -36 C-27 -39 -31 -40 -36 -40Z" fill="#D2412F"/>
+    <path d="M36 -40 C46 -40 48 -24 38 -20 C30 -17 24 -22 24 -28 L32 -30 L25 -36 C27 -39 31 -40 36 -40Z" fill="#D2412F"/>
+    <path d="M-30 6 C-30 -16 30 -16 30 6 C30 20 -30 20 -30 6Z" fill="#D2412F"/>
+    <path d="M-18 -4 C-10 -10 4 -10 12 -6" fill="none" stroke="#F08A74" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+    <g stroke="#9E2A1E" stroke-width="2.4" stroke-linecap="round"><path d="M-8 -10 L-9 -20"/><path d="M8 -10 L9 -20"/></g>
+    <circle cx="-9" cy="-22" r="3.6" fill="#1C1C1C"/><circle cx="9" cy="-22" r="3.6" fill="#1C1C1C"/>
+    <circle cx="-8" cy="-23" r="1.1" fill="#fff"/><circle cx="10" cy="-23" r="1.1" fill="#fff"/>
+  </g>
+
+  <!-- 누르는 표시 -->
+  <g transform="translate(196 120)">
+    <circle r="18" fill="none" stroke="#fff" stroke-width="2.5" opacity=".9"/>
+    <circle r="28" fill="none" stroke="#fff" stroke-width="1.5" opacity=".45"/>
+    <g transform="translate(6 6) rotate(-20)">
+      <rect x="-6" y="0" width="12" height="30" rx="6" fill="#FFE6CF" stroke="#0E2233" stroke-width="2"/>
+      <rect x="-9" y="22" width="32" height="26" rx="11" fill="#FFE6CF" stroke="#0E2233" stroke-width="2"/>
+      <rect x="-4.6" y="20" width="9.2" height="6" fill="#FFE6CF"/>
+    </g>
+  </g>
+</svg>
